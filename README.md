@@ -93,6 +93,3 @@ Set the backend address in `frontend/lib/services/api_service.dart` to an addres
 
 Open `backend/Arduino/esp32_smart_farming/esp32_smart_farming.ino` in the Arduino IDE. Set the Wi-Fi credentials and `API_BASE` to the backend computer's LAN address, install the ArduinoJson and DHT libraries, and flash the sketch to an ESP32 wired to the sensors and relay described in the firmware comments.
 
-## Author
-
-**Gireesh Sadanand Patgar** · [GitHub](https://github.com/gireeshpatgar17)
