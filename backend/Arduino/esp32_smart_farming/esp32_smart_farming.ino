@@ -28,14 +28,14 @@
 // 1. WIFI & FASTAPI CONFIGURATION
 // =====================================================
 
-// Replace with your local Wi-Fi credentials
+// TODO: Set these to the 2.4 GHz Wi-Fi network the ESP32 should join.
 const char* ssid = "YOUR_WIFI_NAME";
 const char* pass = "YOUR_WIFI_PASSWORD";
 
-// Local FastAPI server base address.
-// Use the IPv4 address of your computer running FastAPI (e.g. 192.168.31.122).
-// DO NOT use "localhost" or "127.0.0.1", as those refer to the ESP32 itself.
-const char* API_BASE = "http://192.168.31.122:8000";
+// TODO: Replace YOUR_COMPUTER_LAN_IP with the LAN IPv4 address of the computer
+// running FastAPI. The computer and ESP32 must be able to reach each other.
+// Do not use localhost or 127.0.0.1 here; those addresses refer to the ESP32.
+const char* API_BASE = "http://YOUR_COMPUTER_LAN_IP:8000";
 
 // Endpoints
 const char* TELEMETRY_URL = "/api/device/telemetry";
