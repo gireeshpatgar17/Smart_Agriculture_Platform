@@ -8,7 +8,8 @@ load_dotenv(dotenv_path)
 
 def get_blynk_config():
     server = os.getenv("BLYNK_SERVER", "https://blynk.cloud") or "https://blynk.cloud"
-    token = os.getenv("BLYNK_TOKEN", "qwnX9uWDp77nQvCqUgOAFhcjlmlBfwq5") or "qwnX9uWDp77nQvCqUgOAFhcjlmlBfwq5"
+    # Add your device token to backend/.env; keep credentials out of source code.
+    token = os.getenv("BLYNK_TOKEN", "")
     return server.strip(), token.strip()
 
 
