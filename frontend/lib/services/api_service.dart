@@ -3,17 +3,17 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  // Primary URL is http://127.0.0.1:8888 (tunneled to PC port 8000 via adb reverse, bypassing Realme internal port conflicts)
-  static String baseUrl = 'http://127.0.0.1:8000';
+  // Set this to the FastAPI host reachable from your device.
+  // Android emulator: http://10.0.2.2:8000
+  // Physical device: replace with your computer's LAN IP, e.g. http://192.168.1.25:8000.
+  // For localhost-based simulators, use http://127.0.0.1:8000.
+  static String baseUrl = 'http://10.0.2.2:8000';
 
+  // Optional local fallbacks. Add your own backend host here if needed.
   static final List<String> candidateUrls = [
-    'http://127.0.0.1:8000',
-    'http://192.168.31.122:8000',
     'http://10.0.2.2:8000',
-    'http://127.0.0.1:8888',
+    'http://127.0.0.1:8000',
     'http://localhost:8000',
-    'http://10.11.140.40:8000',
-    'http://10.10.18.142:8000',
   ];
 
   static List<String> get prioritizedUrls {
